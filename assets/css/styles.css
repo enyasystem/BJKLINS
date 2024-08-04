@@ -233,22 +233,13 @@ footer a:hover {
 }
 
  
-<style>
 /* Ensure the carousel container and cards are responsive */
 #carouselTeam {
   max-width: 100%; /* Full width of the container */
   margin: 0 auto; /* Center the carousel within the container */
 }
 
-.carousel-inner {
-  /* display: flex; */
-  /* justify-content: center; Center carousel items */
-}
 
-.carousel-item {
-  /* display: flex; */
-  /* justify-content: center; Center the card horizontally */
-}
 
 .card {
   max-width: 400px; /* Adjust the max-width as needed */
@@ -273,4 +264,3 @@ footer a:hover {
     max-width: 400px; /* Adjust the max-width for large screens */
   }
 }
-</style>
