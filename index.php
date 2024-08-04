@@ -5,7 +5,7 @@
   <!-- Hero section -->
   <section id="hero" class="hero-image">
     <div class="container animated fadeInUp">
-        <h1>Welcome to BJI KLINS</h1>
+        <h1>Welcome to BJ KLINS</h1>
         <p>We make your space sparkle with exceptional cleaning services!</p>
         <a href="#booking" class="btn btn-primary btn-lg">Book Now</a>
     </div>

@@ -4,6 +4,14 @@ body {
   scroll-behavior: smooth;
 }
 
+h1 {
+  color: #00f; /* Blue color */
+  text-shadow: 0 0 3px #00f, 
+               0 0 6px #00f, 
+               0 0 9px #00f, 
+               0 0 12px #00f;
+}
+
 .navbar-brand {
   font-family: 'Lobster', cursive;
   font-size: 24px;
