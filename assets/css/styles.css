@@ -31,7 +31,7 @@ h3 {
 }
 
 .hero-image {
-  background-image: url('img2(0)_1.jpg');
+  background-image: url('../images/img2\(0\)_1.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -43,6 +43,37 @@ h3 {
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
 }
+
+
+/* .hero-image {
+  background: url('./images/img2\(0\)_1.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+} */
+
+.hero-image h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-image p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.hero-image .btn-primary {
+  background-color: #ff5722;
+  border-color: #ff5722;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.25rem;
+  border-radius: 5px;
+}
+
 
 .floating-button a {
   display: flex;
@@ -103,7 +134,7 @@ h3 {
   z-index: 1020;
 }
 
-.back-to-top {
+/* .back-to-top {
   position: fixed;
   bottom: 80px;
   right: 20px;
@@ -130,7 +161,39 @@ h3 {
 .back-to-top a i {
   color: #fff;
   font-size: 24px;
+} */
+
+ /* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  z-index: 99;
 }
+
+.back-to-top a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.back-to-top a:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top a i {
+  font-size: 20px;
+}
+
 
 footer {
   background-color: #0056b3;
@@ -168,3 +231,46 @@ footer a:hover {
   color: #0056b3; /* Darker blue for hover effect */
   text-decoration: underline; /* Optional: underline on hover */
 }
+
+ 
+<style>
+/* Ensure the carousel container and cards are responsive */
+#carouselTeam {
+  max-width: 100%; /* Full width of the container */
+  margin: 0 auto; /* Center the carousel within the container */
+}
+
+.carousel-inner {
+  /* display: flex; */
+  /* justify-content: center; Center carousel items */
+}
+
+.carousel-item {
+  /* display: flex; */
+  /* justify-content: center; Center the card horizontally */
+}
+
+.card {
+  max-width: 400px; /* Adjust the max-width as needed */
+  margin: 0 auto; /* Center the card */
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.card-img-top {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Additional media queries for fine-tuning */
+@media (min-width: 768px) {
+  .card {
+    max-width: 300px; /* Adjust the max-width for medium screens */
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    max-width: 400px; /* Adjust the max-width for large screens */
+  }
+}
+</style>

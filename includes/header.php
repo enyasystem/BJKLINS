@@ -35,9 +35,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#booking">Book Now</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#reviews">Reviews</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="#team">Meet Our Team</a>
                 </li>
@@ -45,7 +45,7 @@
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="About.html">About Us</a>
+                    <a class="nav-link" href="about.php">About Us</a>
                 </li>
             </ul>
         </div>
