@@ -10,10 +10,11 @@
 <br>
 <b>Executive Summary</b>
 <br>
-<b>BJI KLINS</b>, a soon-to-launch professional cleaning service company, is dedicated to providing exceptional cleaning experiences for residential and commercial clients in Warri City, State. We'll offer a variety of customizable cleaning services, including fumigation, to meet the specific needs of our clients, ensuring a clean, healthy, and organized environment. Our focus on reliability, eco-friendly products, and exceptional customer service will position Scrub Klin as the premier cleaning service in the area.
-
-
-
+<b>BJI KLINS</b>, a soon-to-launch professional cleaning service company, is dedicated to providing exceptional 
+cleaning experiences for residential and commercial clients in Warri City, State. We'll offer a variety of 
+customizable cleaning services, including fumigation, to meet the specific needs of our clients, ensuring a 
+clean, healthy, and organized environment. Our focus on reliability, eco-friendly products, and exceptional 
+customer service will position Scrub Klin as the premier cleaning service in the area.
 </p>
         </div>
         <div class="col-md-6">

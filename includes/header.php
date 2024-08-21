@@ -11,6 +11,11 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
   <!--  CSS -->
   <link href="./assets/css/styles.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap-grid.min.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap-grid.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap-grid.css.map" rel="stylesheet">
+  <link href="../assets/css/bootstrap-reboot.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap-reboot.min.css" rel="stylesheet">
   <link rel="icon" href="../assets/images/BJI_Logo.png" type="image/png">
 </head>
 
@@ -19,7 +24,7 @@
   <!-- Header with navbar -->
   <header>
      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../index.php">
             <img src="images/BJI_Logo.png" alt="BJI LOGO">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +33,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#hero">Home</a>
+                    <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#services">Services</a>
@@ -46,7 +51,7 @@
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.php">About Us</a>
+                    <a class="nav-link" href="#about">About Us</a>
                 </li>
             </ul>
         </div>

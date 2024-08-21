@@ -19,7 +19,7 @@
   <div class="container">
     <h2 class="display-4 font-weight-bold mb-4">Transform Your Space with a Sparkling Clean Home!</h2>
     <p class="lead mb-4">Our top-notch professional cleaners are ready to make your home shine like never before. Don’t wait – book our cleaning service today and enjoy the ultimate clean!</p>
-    <a href="#booking" class="btn btn-light btn-lg rounded-pill shadow">Get Started Now</a>
+    <a href="./book.php" class="btn btn-light btn-lg rounded-pill shadow">Get Started Now</a>
   </div>
 </section>
 
@@ -111,7 +111,7 @@ include 'book.php';
                 <p class="card-text">"Sparkling Cleaners did an amazing job! My house has never been so clean."</p>
                 <h5 class="card-title">- Jane Doe</h5>
               </div>
-            </div>
+            </ddiv>
           </div>
           <div class="carousel-item">
             <div class="card animated fadeInUp">
@@ -219,11 +219,11 @@ include 'book.php';
 
 
 
-  <!-- Contact section -->
-  <section id="contact">
+<!-- Contact section -->
+<section id="contact">
     <div class="container">
       <h2 class="text-center">Contact Us</h2>
-      <form>
+      <form action="contact_form.php">
         <div class="form-group">
           <label for="contactName">Name</label>
           <input type="text" class="form-control" id="contactName" required>
@@ -240,6 +240,7 @@ include 'book.php';
       </form>
     </div>
   </section>
+  
 
  
     <!-- <div class="back-to-top">
@@ -258,46 +259,6 @@ include 'book.php';
 
 <?php include './includes/footer.php'; ?>
 
-</body>
 
-  <!-- Bootstrap JS and dependencies
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
-  <!-- Custom JavaScript -->
-  <script>
-    document.getElementById('bookingForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      document.getElementById('bookingConfirmation').style.display = 'block';
-      document.getElementById('bookingConfirmation').innerHTML = `Thank you, ${name}! Your booking has been confirmed.`;
-      document.getElementById('bookingForm').reset();
-    });
-
-    // Add animation class to sections when they come into view
-    window.addEventListener('scroll', function () {
-      const elements = document.querySelectorAll('.animated');
-      for (let i = 0; i < elements.length; i++) {
-        const element = elements[i];
-        const position = element.getBoundingClientRect();
-        if (position.top < window.innerHeight && position.bottom >= 0) {
-          element.classList.add('fadeInUp');
-        } else {
-          element.classList.remove('fadeInUp');
-        }
-      }
-    });
-
-    // Show/hide Back to Top button
-    window.addEventListener('scroll', function () {
-      const backToTop = document.querySelector('.back-to-top');
-      if (window.scrollY > 300) {
-        backToTop.style.display = 'block';
-      } else {
-        backToTop.style.display = 'none';
-      }
-    });
-  </script>
-</body>
 
 </html>

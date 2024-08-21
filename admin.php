@@ -1,65 +1,56 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "cleaning_service";
+session_start(); // Start the session at the beginning of the script
+include './includes/db.php'; // Include the database connection
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Check if the form was submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve and sanitize input values
+    $date = $connection->real_escape_string($_POST['date']);
+    $time = $connection->real_escape_string($_POST['time']);
+    $name = $connection->real_escape_string($_POST['name']);
+    $email = $connection->real_escape_string($_POST['email']);
+    $service = $connection->real_escape_string($_POST['service']);
+    $message = $connection->real_escape_string($_POST['message']);
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    // Insert the booking into the database
+    $sql = "INSERT INTO bookings (name, email, phone, service, date, time, message) 
+            VALUES ('$name', '$email', '', '$service', '$date', '$time', '$message')";
+
+    if ($connection->query($sql) === TRUE) {
+        $_SESSION['booking_success'] = true; // Set a session variable for success message
+        header("Location: " . $_SERVER['PHP_SELF']); // Redirect to the same page to avoid form resubmission
+        exit;
+    } else {
+        echo "Error: " . $sql . "<br>" . $connection->error;
+    }
 }
 
-$sql = "SELECT * FROM bookings";
-$result = $conn->query($sql);
+include './includes/header.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - View Bookings</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
-    <div class="container">
-        <h1 class="mt-5">Cleaning Service Bookings</h1>
-        <table class="table table-bordered mt-3">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Service</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Message</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
-                        echo "<tr>
-                                <td>{$row['id']}</td>
-                                <td>{$row['name']}</td>
-                                <td>{$row['email']}</td>
-                                <td>{$row['phone']}</td>
-                                <td>{$row['service']}</td>
-                                <td>{$row['date']}</td>
-                                <td>{$row['time']}</td>
-                                <td>{$row['message']}</td>
-                              </tr>";
-                    }
-                } else {
-                    echo "<tr><td colspan='8'>No bookings found</td></tr>";
-                }
-                $conn->close();
-                ?>
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
+<div class="container">
+    <?php
+    // Display success message if booking was successful
+    if (isset($_SESSION['booking_success']) && $_SESSION['booking_success']) {
+        echo '<div class="alert alert-success mt-3">
+                <strong>&#10004; Booking successful!</strong> Thank you for choosing our service.
+              </div>';
+        // Remove the session variable
+        unset($_SESSION['booking_success']);
+        
+        // Redirect to home page after 3 seconds
+        echo '<script>
+                setTimeout(function() {
+                    window.location.href = "index.php"; // Replace "index.php" with your home page
+                }, 3000); // 3 seconds delay
+              </script>';
+    }
+    ?>
+
+    <!-- Your booking table or other content goes here -->
+</div>
+
+<?php
+include './includes/footer.php';
+$connection->close();
+?>
